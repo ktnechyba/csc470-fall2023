@@ -2,14 +2,17 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public class terrainGen : MonoBehaviour
 {
     public GameObject TentPrefab;
-    public GameObject mushroomPrefab;
     public GameObject tomatoSlicePrefab;
     public GameObject campfirePrefab;
     public GameObject asparagusPrefab;
     public GameObject flowersPrefab;
+    public GameObject mushroomPrefab;
+    public GameObject ballPrefab;
+    public GameObject soupPrefab;
 
     // Start is called before the first frame update
     void Start()
@@ -20,6 +23,7 @@ public class terrainGen : MonoBehaviour
         {
             generateFlower();
         }
+
     }
 
     void generateFlower()
@@ -31,40 +35,15 @@ public class terrainGen : MonoBehaviour
         GameObject treeObj = Instantiate(flowersPrefab, pos, Quaternion.identity);
     }
 
-
-    public void mushroomAroundPoint(int num, Vector3 point, float radius)
+    // Update is called once per frame
+    void Update()
     {
-
-        for (int i = 0; i < num; i++)
+        if (Input.GetKeyDown(KeyCode.Space))
         {
+            GameObject ba = Instantiate(ballPrefab, new Vector3(-4.429f, 1.976f, 0.055f), Quaternion.identity);
 
-            /* Distance around the circle */
-            var radians = 2 * Mathf.PI / num * i;
-
-            /* Get the vector direction */
-            var vertical = Mathf.Sin(radians);
-            var horizontal = Mathf.Cos(radians);
-
-            var spawnDir = new Vector3(horizontal, 0, vertical);
-
-            /* Get the spawn position */
-            var spawnPos = point + spawnDir * radius; // Radius is just the distance away from the point
-
-            /* Now spawn */
-            var enemy = Instantiate(mushroomPrefab, spawnPos, Quaternion.identity) as GameObject;
-
-            /* Rotate the enemy to face towards player */
-            enemy.transform.LookAt(point);
-
-            /* Adjust height */
-            enemy.transform.Translate(new Vector3(0, enemy.transform.localScale.y / 2, 0));
         }
     }
 
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }
