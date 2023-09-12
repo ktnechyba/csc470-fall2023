@@ -7,6 +7,8 @@ public class triggerEvent : MonoBehaviour
 
     public GameObject soupPrefab;
     public GameObject knifePrefab;
+    public GameObject bigTomatoes;
+    public GameObject slicedTomatoesPrefab;
 
     // Start is called before the first frame update
     void Start()
@@ -28,6 +30,8 @@ public class triggerEvent : MonoBehaviour
     {
         GameObject soupObj = Instantiate(soupPrefab, new Vector3(0.06800604f, 1.683f, -1.658816f), Quaternion.identity);
         GameObject knifeObj = Instantiate(knifePrefab, new Vector3(1.378176f, 1.683f, -1.408534f), Quaternion.identity);
+       
+        GameObject sliceTomobj = Instantiate(slicedTomatoesPrefab, new Vector3(0, .278f, 0f), Quaternion.identity);
     }
 
 // Update is called once per frame

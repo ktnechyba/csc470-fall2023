@@ -12,19 +12,31 @@ public class terrainGen : MonoBehaviour
     public GameObject flowersPrefab;
     public GameObject mushroomPrefab;
     public GameObject ballPrefab;
-    public GameObject soupPrefab;
+    public GameObject bigTomatoesPrefab;
+    public float xfact = 0;
+    public float zfact = 0;
+    public float spacing = .05f;
+
 
     // Start is called before the first frame update
     void Start()
     {
         GameObject tentobj = Instantiate(TentPrefab, new Vector3(0.911f, 0.5897f, 1.843f), Quaternion.identity);
-        GameObject fireobj = Instantiate(campfirePrefab, new Vector3(-.56f, .362f, 1.024807f), Quaternion.identity);
+        GameObject fireobj = Instantiate(campfirePrefab, new Vector3(-.69f, .362f, 1.4f), Quaternion.identity);
+        
         for (int i = 0; i < 35; i++)
         {
             generateFlower();
         }
 
+        for (int i = 0; i < 10; i++)
+        {
+            generateMushrooms();
+        }
+
+
     }
+
 
     void generateFlower()
     {
@@ -34,9 +46,18 @@ public class terrainGen : MonoBehaviour
         Vector3 pos = new Vector3(x, y, z);
         GameObject treeObj = Instantiate(flowersPrefab, pos, Quaternion.identity);
     }
-
-    // Update is called once per frame
-    void Update()
+    void generateMushrooms()
+    {
+        float x = 0.35f+xfact;
+        float y = 0.275f;
+        float z = 1.5f+zfact;
+        Vector3 pos = new Vector3(x, y, z);
+        GameObject treeObj = Instantiate(mushroomPrefab, pos, Quaternion.identity);
+        xfact -= .2f;
+        zfact -= .195f;
+    }
+        // Update is called once per frame
+        void Update()
     {
         if (Input.GetKeyDown(KeyCode.Space))
         {
