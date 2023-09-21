@@ -4,7 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f3f60078-9c99-4229-93d7-40db9758a486" name="Changes" comment="" />
+    <list default="true" id="f3f60078-9c99-4229-93d7-40db9758a486" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Assignments/03_emergence/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assignments/02_basics/Assets/Materials/lowpoly-mushroom.obj" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -31,12 +35,13 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "main",
-    "last_opened_file_path": "/Users/knechyba/Desktop/csc470-fall2023/Assignments/02_basics",
+    "last_opened_file_path": "/Users/knechyba/Desktop/csc470-fall2023/Assignments/03_emergence",
     "settings.editor.selected.configurable": "preferences.lookFeel"
   }
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/Assignments/03_emergence" />
       <recent name="$PROJECT_DIR$/Assignments/02_basics" />
       <recent name="$PROJECT_DIR$/Assignments/Rube Goldberg Machine 1" />
     </key>
