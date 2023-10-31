@@ -7,6 +7,7 @@ public interface Iinteractable
     public string InteractionPrompt { get; }
     public string QuestInteraction { get; }
     public string NameInteract { get; }
+    public string CandyInteract { get; }
 
     public bool Interact(Interactor interactor);
 

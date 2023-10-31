@@ -11,6 +11,7 @@ public class Interactor : MonoBehaviour
     [SerializeField] private InteractionPrompt _interactionPromptUI;
     [SerializeField] private QuestInteraction _questInteractUI;
     [SerializeField] private NameInteract _nameInteractUI;
+    [SerializeField] private CandyInteract _candyInteractUI;
 
     private readonly Collider[] _collider = new Collider[3];
     [SerializeField] private int _numFound;
@@ -56,7 +57,24 @@ public class Interactor : MonoBehaviour
                     }
                 }
 
-                if (Input.GetKeyDown(KeyCode.Q))
+
+
+                else if (Input.GetKeyDown(KeyCode.K))
+                {
+                    if (_interactionPromptUI.PromptIsDisplayed)
+                    {
+                        _interactionPromptUI.PromptClose();
+                    }
+                    if (!_candyInteractUI.CandyDisplayed)
+                    {
+                        _candyInteractUI.CandySetUp(_interactable.CandyInteract);
+                    }
+                    if (!_nameInteractUI.NameIsDisplayed)
+                    {
+                        _nameInteractUI.NameSetUp(_interactable.NameInteract);
+                    }
+                }
+                else if (Input.GetKeyDown(KeyCode.Q))
                 {
                     Debug.Log("q");
                     if (_questInteractUI.QuestIsDisplayed)
@@ -67,26 +85,13 @@ public class Interactor : MonoBehaviour
                     {
                         _nameInteractUI.NameClose();
                     }
-
+                    if (_candyInteractUI.CandyDisplayed)
+                    {
+                        _candyInteractUI.CandyClose();
+                    }
                 }
 
-                    //}
-                //else if (Input.GetKeyDown(KeyCode.K))
-                //{
-                //    if (_interactionPromptUI.PromptIsDisplayed)
-                //    {
-                //        _interactionPromptUI.PromptClose();
-                //    }
-                //    //open something else up
-                //    if (Input.GetKeyDown(KeyCode.Q))
-                //    {
-
-                //    }
-                //    else if (Input.GetKeyDown(KeyCode.K))
-                //    {
-                //        //exchange flowers
-                //    }
-                //}
+                
             }
         }
         else

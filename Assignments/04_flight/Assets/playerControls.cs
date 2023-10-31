@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class playerControls : MonoBehaviour
 {
-    //player image from "Bongo Cat Pumpkin by Neil Realubit [CC-BY] via Poly Pizza"
+
     float forwardSpeed = 10f;
     float rotateSpeed = 90f;
     CharacterController cc;
@@ -19,7 +19,7 @@ public class playerControls : MonoBehaviour
     void Start()
     {
         cc = gameObject.GetComponent<CharacterController>();
-        GameManagerScript.SharedInstance.UpdateScore(0);
+        //GameManagerScript.SharedInstance.UpdateScore(0);
 
     }
 
@@ -61,36 +61,9 @@ public class playerControls : MonoBehaviour
         cameraObject.transform.LookAt(transform);
         oldCamPos = newCamPos;
 
-        if (Input.GetKeyDown(KeyCode.Return))
-        {
-            CheckVillagerTalking();
-        }
-    }
-    void CheckVillagerTalking()
-    {
-        GameObject[] villagers = GameObject.FindGameObjectsWithTag("villager");
-        float closest = 999999999;
-        GameObject closestVillager = null;
-        for (int i = 0; i < villagers.Length; i++)
-        {
-            float d = Vector3.Distance(transform.position, villagers[i].transform.position);
-            if (d < closest)
-            {
-                closest = d;
-                closestVillager = villagers[i];
-            }
-        }
 
-        if (closestVillager != null)
-        {
-            Vector3 vectorToChicken = (closestVillager.transform.position - transform.position).normalized;
-            float angleToChicken = Vector3.Angle(transform.forward, vectorToChicken);
-            if (angleToChicken < 45)
-            {
-                GameManagerScript.SharedInstance.Launchdialogue(closestVillager.GetComponent<VillagerScript>());
-            }
-        }
     }
+
 
     private void OnTriggerEnter(Collider other)
     {
@@ -112,6 +85,13 @@ public class playerControls : MonoBehaviour
             //    GameObject.Find("carpet").GetComponent<carpetControl>().enabled = false;
             //}
         }
+        if (other.CompareTag("barrierTrigger"))
+        {
+  
+            GameManagerScript.SharedInstance.wall2.SetActive(true);
+        }
+
+
     }
 
     //private void OnTriggerExit(Collider other)
@@ -128,4 +108,5 @@ public class playerControls : MonoBehaviour
 
     //    }
     //}
+
 }

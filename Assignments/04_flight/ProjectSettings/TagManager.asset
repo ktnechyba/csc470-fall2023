@@ -8,6 +8,13 @@ TagManager:
   - candy
   - carpet
   - carpetTrigger
+  - enemy
+  - death
+  - land
+  - barrierTrigger
+  - coin
+  - ring
+  - fuel
   layers:
   - Default
   - TransparentFX

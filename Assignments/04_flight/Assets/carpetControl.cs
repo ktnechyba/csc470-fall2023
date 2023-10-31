@@ -14,11 +14,13 @@ public class carpetControl : MonoBehaviour
 
     public GameObject cameraObject;
 
+
     // Start is called before the first frame update
     void Start()
     {
         this.enabled = false;
     }
+
 
     // Update is called once per frame
     void Update()
@@ -62,20 +64,41 @@ public class carpetControl : MonoBehaviour
         {
             other.transform.SetParent(transform);
         }
-                           //other.transform.SetParent(null);
-            //this.enabled = false;
-            //GameObject.Find("player").GetComponent<playerControls>().enabled = true;
-        
+        //other.transform.SetParent(null);
+        //this.enabled = false;
+        //GameObject.Find("player").GetComponent<playerControls>().enabled = true;
+        if (other.CompareTag("land"))
+        {
+            GameManagerScript.SharedInstance.wall2.SetActive(false);
+ 
+            gameObject.transform.position = new Vector3(9.957f,0f, -5.273f);
+            //this.GetComponent<Rigidbody>().isKinematic = false;
+        }
+
+        //if (other.CompareTag("fuel"))
+        //{
+        //    GameManagerScript.SharedInstance.AddFuel(25);
+        //}
+        //if (other.CompareTag("ring"))
+        //{
+        //    GameManagerScript.SharedInstance.RainCoins(5);
+        //}
+        //if (other.CompareTag("coin"))
+        //{
+        //    GameManagerScript.SharedInstance.UpdateCoins(1);
+        //}
+
     }
+
 
     //private void OnTriggerExit(Collider other)
     //{
     //    if (other.CompareTag("Player"))
     //    {
 
-            //other.transform.SetParent(null);
-            //this.enabled = false;
-            //GameObject.Find("Player").GetComponent<playerControls>().enabled = true;
+    //other.transform.SetParent(null);
+    //this.enabled = false;
+    //GameObject.Find("Player").GetComponent<playerControls>().enabled = true;
 
     //    }
     //}

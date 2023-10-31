@@ -50,6 +50,7 @@ MonoBehaviour:
   _prompt: Press E to get Quest, Press K to exchange candy for key
   _quest: Collect 25 Candy to get the key to escape (q to exit)
   _name: Jeff
+  _candy: 'Give me candy in exchange for key (press q to exit) '
 --- !u!65 &2274670157981139275
 BoxCollider:
   m_ObjectHideFlags: 0

@@ -4,14 +4,14 @@ using UnityEngine;
 
 public class VillagerScript : MonoBehaviour, Iinteractable
 {
-    public string[] utterances;
     [SerializeField] private string _prompt;
     [SerializeField] private string _quest;
     [SerializeField] private string _name;
-
+    [SerializeField] private string _candy;
     string Iinteractable.InteractionPrompt => _prompt;
     string Iinteractable.QuestInteraction => _quest;
     string Iinteractable.NameInteract => _name;
+    string Iinteractable.CandyInteract => _candy;
 
     bool Iinteractable.Interact(Interactor interactor)
     {
@@ -22,11 +22,13 @@ public class VillagerScript : MonoBehaviour, Iinteractable
     // Start is called before the first frame update
     void Start()
     {
-        transform.Rotate(0, Random.Range(0, 360), 0, Space.Self); 
+
     }
 
     // Update is called once per frame
     void Update()
     {
+
+
     }
 }
