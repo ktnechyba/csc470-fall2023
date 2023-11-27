@@ -12,13 +12,13 @@ public class PlayerControllerRuins : MonoBehaviour
     float gravityModifier = 4.5f;
     Vector3 oldCamPos;
 
-    public GameObject cameraObject;
+    Camera cameraObject;
 
     // Start is called before the first frame update
     void Start()
     {
         cc = gameObject.GetComponent<CharacterController>();
-        //GameManagerScript.SharedInstance.UpdateScore(0);
+        //cameraObject = Camera.main;
 
     }
 
@@ -51,14 +51,14 @@ public class PlayerControllerRuins : MonoBehaviour
 
         cc.Move(amountToMove * Time.deltaTime);
 
-        Vector3 newCamPos = transform.position + -transform.forward * 2f + Vector3.up * 1.4f;
-        if (oldCamPos == null)
-        {
-            oldCamPos = newCamPos;
-        }
-        cameraObject.transform.position = (newCamPos + oldCamPos) / 2f;
-        cameraObject.transform.LookAt(transform);
-        oldCamPos = newCamPos;
+        //Vector3 newCamPos = transform.position + -transform.forward * 2f + Vector3.up * 1.4f;
+        //if (oldCamPos == null)
+        //{
+        //    oldCamPos = newCamPos;
+        //}
+        //cameraObject.transform.position = (newCamPos + oldCamPos) / 2f;
+        //cameraObject.transform.LookAt(transform);
+        //oldCamPos = newCamPos;
 
 
     }

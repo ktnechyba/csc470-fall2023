@@ -12,9 +12,10 @@ GameObject:
   - component: {fileID: 4972719368732402930}
   - component: {fileID: 3450479264859484407}
   - component: {fileID: -5278381847277365661}
+  - component: {fileID: -982111569279821259}
   m_Layer: 0
   m_Name: player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -83,7 +84,7 @@ CharacterController:
   m_StepOffset: 0.3
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
-  m_Center: {x: 0, y: 0.2156323, z: -0.002517611}
+  m_Center: {x: 0, y: 0.26, z: -0.002517611}
 --- !u!114 &-5278381847277365661
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -99,6 +100,18 @@ MonoBehaviour:
   cc: {fileID: 3450479264859484407}
   moveSpeed: 5
   hasTarget: 0
+--- !u!114 &-982111569279821259
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 218450004707394844}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6e1b466316f934de5be8043dcacc6cd6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &5597105868605821457
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public class PlayerControllerTown : MonoBehaviour
 {
     //public GameObject playerPrefab;
@@ -41,4 +42,5 @@ public class PlayerControllerTown : MonoBehaviour
             target = targetPoint;
             hasTarget = true;
     }
+
 }
