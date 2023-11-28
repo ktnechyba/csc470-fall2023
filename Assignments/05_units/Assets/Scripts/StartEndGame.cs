@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class StartEndGame : MonoBehaviour
 {
     public string sceneName;
+    [SerializeField] private AudioClip selected;
     // Start is called before the first frame update
     void Start()
     {
@@ -27,5 +28,9 @@ public class StartEndGame : MonoBehaviour
     {
         Debug.Log("quit");
         Application.Quit();
+    }
+    public void ButtonSelected()
+    {
+        SoundsEffectsManager.instance.PlaySoundFX(selected, transform, 1f);
     }
 }

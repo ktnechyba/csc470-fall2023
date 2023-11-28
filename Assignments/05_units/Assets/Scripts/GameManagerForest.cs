@@ -9,7 +9,7 @@ public class GameManagerForest : MonoBehaviour
 
     void Start()
     {
-        GameObject playerObj = Instantiate(playerPrefab, new Vector3(233, 0, -290), Quaternion.identity);
+        GameObject playerObj = Instantiate(playerPrefab, new Vector3(147.38f, 0, -292.8349f), Quaternion.identity);
         playerObj.name = "player";
         playerObj.GetComponent<PlayerControllerTown>().enabled = false;
         playerObj.GetComponent<PlayerControllerRuins>().enabled = true;

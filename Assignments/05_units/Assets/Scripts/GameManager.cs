@@ -2,17 +2,29 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using TMPro;
 
 public class GameManager : MonoBehaviour
 {
     public static GameManager sharedInstance;
     //public GameObject starUnitPrefab;
     public GameObject playerPrefab;
-    private Vector3 target;
-    PlayerControllerTown pc;
-    //GameObject player;
+    public GameObject trashPrefab;
+    private List<GameObject> pooledObjects = new List<GameObject>();
+    private int poolAmount = 21;
+    public bool death = false;
+    public bool potionSelected = false;
+    public int pointCount = 0;
+    public int coinCount = 100;
 
-    //[SerializeField] StarScript stars;
+    public int starCount = 0;
+    public int happiness = 100;
+    public TMP_Text happyText;
+
+
+
+
+
     // Start is called before the first frame update
 
     private void Awake()
@@ -21,35 +33,78 @@ public class GameManager : MonoBehaviour
     }
     void Start()
     {
-        GameObject playerObj = Instantiate(playerPrefab, new Vector3(.56f, -.154f, 8.58f), Quaternion.identity);
-        pc = playerObj.GetComponent<PlayerControllerTown>();
-        playerObj.name = "player";
-        if (playerObj.GetComponent<PlayerControllerRuins>().enabled == true)
-        { playerObj.GetComponent<PlayerControllerRuins>().enabled = false;
-            playerObj.GetComponent<PlayerControllerTown>().enabled = true; 
+
+        for (int i = 0; i<poolAmount; i++)
+        {
+            Vector3 trashLoc = new Vector3(Random.Range(-9, 9), 0, Random.Range(-9, 9));
+            GameObject trashObj = Instantiate(trashPrefab, trashLoc, Quaternion.identity);
+            trashObj.SetActive(false);
+            pooledObjects.Add(trashObj);
+
         }
+        happyText.text = "Happiness " + happiness.ToString();
+
 
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetMouseButtonDown(0))
-        {
-            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-            RaycastHit hit;
-            if (Physics.Raycast(ray, out hit, 99999))
-            {
-                if (hit.collider.gameObject.layer == LayerMask.NameToLayer("ground"))
-                    {
-                    ///if (hit.collider.gameObjectLayer == LayerMask.NameToLayer("ground"))
-                    //GameObject starObj = Instantiate(starUnitPrefab, hit.point, Quaternion.identity);
-                    //GameObject playerObj = Instantiate(playerPrefab, hit.point, Quaternion.identity);
-                    Debug.Log(hit.point);
-                    pc.SetTarget(hit.point); }
-            }
 
+        //StartCoroutine(Trash());
+        if (death == true)
+        { 
+            SceneManager.LoadScene("GameOver");
         }
+        if (happiness == 0)
+        {
+            death = true;
+        }
+        StartCoroutine(Death());
+        happyText.text = "Happiness " + happiness.ToString();
+
     }
+
+    public GameObject GetPooledObj()
+    {
+        for (int i = 0; i < pooledObjects.Count; i++)
+        {
+            if (!pooledObjects[i].activeInHierarchy)
+            {
+                return pooledObjects[i];
+            }
+        }
+        return null;
+    }
+    public void HasPotionSelected()
+    {
+        if (potionSelected == false)
+        {
+            potionSelected = true;
+        }
+        else if (potionSelected == true)
+        { potionSelected = false; }
+    }
+
+
+
+    IEnumerator Trash()
+    {
+        yield return new WaitForSeconds(3);
+        int num  = Random.Range(0, pooledObjects.Count-1);
+        for (int i =0; i<num; i++)
+        {
+            pooledObjects[i].SetActive(true);
+        }
+
+    }
+    IEnumerator Death()
+    {
+        yield return new WaitForSeconds(10);
+        happiness -= 10;
+
+    }
+
+
 
 }

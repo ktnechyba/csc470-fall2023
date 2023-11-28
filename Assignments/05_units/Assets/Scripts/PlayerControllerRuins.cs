@@ -18,7 +18,7 @@ public class PlayerControllerRuins : MonoBehaviour
     void Start()
     {
         cc = gameObject.GetComponent<CharacterController>();
-        //cameraObject = Camera.main;
+        cameraObject = Camera.main;
 
     }
 
@@ -51,17 +51,18 @@ public class PlayerControllerRuins : MonoBehaviour
 
         cc.Move(amountToMove * Time.deltaTime);
 
-        //Vector3 newCamPos = transform.position + -transform.forward * 2f + Vector3.up * 1.4f;
-        //if (oldCamPos == null)
-        //{
-        //    oldCamPos = newCamPos;
-        //}
-        //cameraObject.transform.position = (newCamPos + oldCamPos) / 2f;
-        //cameraObject.transform.LookAt(transform);
-        //oldCamPos = newCamPos;
+        Vector3 newCamPos = transform.position + -transform.forward * 3f + Vector3.up * 3f;
+        if (oldCamPos == null)
+        {
+            oldCamPos = newCamPos;
+        }
+        cameraObject.transform.position = (newCamPos + oldCamPos) / 2f;
+        cameraObject.transform.LookAt(transform);
+        oldCamPos = newCamPos;
 
 
     }
+
 
 
 }

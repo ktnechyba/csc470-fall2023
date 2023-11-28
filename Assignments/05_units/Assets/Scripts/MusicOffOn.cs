@@ -7,19 +7,44 @@ public class MusicOffOn : MonoBehaviour
 {
     [SerializeField] private Sprite[] musicSprites;
     [SerializeField] private Image targetSprite;
-    [SerializeField] private bool hasBeenClicked = false;
-    public void Toggle()
+    [SerializeField] private bool muted = false;
+    void Start()
     {
-        if (targetSprite.sprite == musicSprites[0] && hasBeenClicked ==false)
+        if (PlayerPrefs.HasKey("muted"))
         {
-            targetSprite.sprite = musicSprites[1];
-            hasBeenClicked = true;
+            PlayerPrefs.SetInt("muted", 0);
         }
-
-        else if (hasBeenClicked == true && targetSprite.sprite == musicSprites[1])
+        else
         {
-            targetSprite.sprite = musicSprites[0];
-            hasBeenClicked = false;
+            Load();
         }
     }
+
+    public void Toggle()
+    {
+        if (targetSprite.sprite == musicSprites[0] && muted ==false)
+        {
+            targetSprite.sprite = musicSprites[1];
+            muted = true;
+            AudioListener.pause = true;
+        }
+
+        else if (muted == true && targetSprite.sprite == musicSprites[1])
+        {
+            targetSprite.sprite = musicSprites[0];
+            muted = false;
+            AudioListener.pause = false;
+        }
+        Save();
+    }
+    private void Load()
+    {
+        muted = PlayerPrefs.GetInt("muted") == 1;
+    }
+    private void Save()
+    {
+        PlayerPrefs.SetInt("muted", muted ? 1 : 0);
+
+    }
+
 }
