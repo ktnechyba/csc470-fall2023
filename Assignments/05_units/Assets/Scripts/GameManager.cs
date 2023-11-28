@@ -101,8 +101,9 @@ public class GameManager : MonoBehaviour
     IEnumerator Death()
     {
         yield return new WaitForSeconds(10);
-        happiness -= 10;
 
+        happiness -= 10;
+        yield return new WaitForSeconds(20);
     }
 
 
