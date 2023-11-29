@@ -61,7 +61,6 @@ public class GameManager : MonoBehaviour
             death = true;
         }
         StartCoroutine(Death());
-        happyText.text = "Happiness " + happiness.ToString();
 
     }
 
@@ -103,6 +102,7 @@ public class GameManager : MonoBehaviour
         yield return new WaitForSeconds(10);
 
         happiness -= 10;
+        yield return happyText.text = "Happiness " + happiness.ToString();
         yield return new WaitForSeconds(20);
     }
 

@@ -68,7 +68,7 @@ public class PlayerControllerTown : MonoBehaviour
 
     IEnumerator BoxCollide()
     {
-        yield return new WaitForSeconds(30);
+        yield return new WaitForSeconds(3);
         GameObject.FindGameObjectWithTag("potions").GetComponent<BoxCollider>().enabled = true;
         GameObject.FindGameObjectWithTag("stars").GetComponent<BoxCollider>().enabled = true;
     }
