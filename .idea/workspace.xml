@@ -4,10 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f3f60078-9c99-4229-93d7-40db9758a486" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Assignments/final/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assignments/final/README.md" afterDir="false" />
-    </list>
+    <list default="true" id="f3f60078-9c99-4229-93d7-40db9758a486" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -34,19 +31,21 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "main",
-    "last_opened_file_path": "/Users/knechyba/Desktop/csc470-fall2023/Assignments/final",
+    "last_opened_file_path": "/Users/knechyba/Desktop/csc470-fall2023/placeholder",
     "settings.editor.selected.configurable": "preferences.lookFeel"
   }
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/placeholder" />
       <recent name="$PROJECT_DIR$/Assignments/final" />
       <recent name="$PROJECT_DIR$/Assignments/Final" />
       <recent name="$PROJECT_DIR$/Assignments/05_units" />
       <recent name="$PROJECT_DIR$/Assignments/04_flight" />
-      <recent name="$PROJECT_DIR$/Assignments/03_emergence" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/assignments" />
+      <recent name="$PROJECT_DIR$/placeholder" />
       <recent name="$PROJECT_DIR$/Assignments/01_machine" />
     </key>
   </component>
