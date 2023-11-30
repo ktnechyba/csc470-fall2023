@@ -36,7 +36,7 @@ I want to use more calming music - I really like the music in Monument Valley
 ### Interface Sketches
 
 ### Story/Theme
-Solve puzzles and defeat the enemy
+Solve puzzles and defeat the enemy.
 As a sheltered character, you want to spread your wings, so you go on an adventure.
 You've heard stories about other adventurers helping clear the land of evil monsters. There is 
 currently one evil duo left, but they have protected themselves, hiding away to gain more power, 
@@ -54,10 +54,10 @@ Have 3 puzzles, upon completion of first two puzzles, collect items to help in t
                             4th = collect items/regain health and/or new spells
 still 2 playable character options
 ## Timeline
-12/1 -> have plans finished, have Main Menu and GameOver scene created by class start -> work on 
-12/5 -> first Puzzle completed w/ 1st character basics done, scene for collecting items competed
+- 12/1 -> have plans finished, have Main Menu and GameOver scene created by class start -> work on 
+- 12/5 -> first Puzzle completed w/ 1st character basics done, scene for collecting items competed
         animations for scene changes done, boss battle in the works
-12/8 -> 2nd and most of 3rd puzzle done w/ 1st player completed and 2nd player just about done, 
+- 12/8 -> 2nd and most of 3rd puzzle done w/ 1st player completed and 2nd player just about done, 
         completion of boss battle
-12/12 -> have target completed and fine-tuned, if time while studying and taking finals, attempt
+- 12/12 -> have target completed and fine-tuned, if time while studying and taking finals, attempt
         high bar 
