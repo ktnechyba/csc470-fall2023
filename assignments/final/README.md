@@ -36,7 +36,8 @@ I want to use more calming music - I really like the music in Monument Valley
 ### Interface Sketches
 
 ### Story/Theme
-Solve puzzles and defeat the enemy.
+Solve puzzles and defeat the enemy
+
 As a sheltered character, you want to spread your wings, so you go on an adventure.
 You've heard stories about other adventurers helping clear the land of evil monsters. There is 
 currently one evil duo left, but they have protected themselves, hiding away to gain more power, 
