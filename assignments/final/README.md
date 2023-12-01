@@ -1,7 +1,7 @@
 # Final Plans
 ## Game Components
 ### Gameplay Description
-A mix of Captain Toad's Treasure Tracker and Monument Valley 1 and 2
+A 3D game mix of Captain Toad's Treasure Tracker and Monument Valley 1 and 2
 
 User will solve puzzles on screen using mouse clicks
 interactions w/ NPC via computer keys or mouse click on UI dialogue box
