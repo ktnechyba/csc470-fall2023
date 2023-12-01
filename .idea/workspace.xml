@@ -4,7 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f3f60078-9c99-4229-93d7-40db9758a486" name="Changes" comment="" />
+    <list default="true" id="f3f60078-9c99-4229-93d7-40db9758a486" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/assignments/final/images/IMG_9160.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assignments/final/images/IMG_9161.jpeg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assignments/final/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/assignments/final/README.md" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -31,7 +35,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "main",
-    "last_opened_file_path": "/Users/knechyba/Desktop/csc470-fall2023/placeholder",
+    "last_opened_file_path": "/Users/knechyba/Desktop/csc470-fall2023/assignments/final/images",
     "settings.editor.selected.configurable": "preferences.lookFeel"
   }
 }]]></component>

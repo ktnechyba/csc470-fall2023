@@ -34,7 +34,8 @@ I want to use more calming music - I really like the music in Monument Valley
 - dying will have a different sound
 
 ### Interface Sketches
-
+![IMG_9160.jpeg](images%2FIMG_9160.jpeg)
+![IMG_9161.jpeg](images%2FIMG_9161.jpeg)
 ### Story/Theme
 Solve puzzles and defeat the enemy
 
@@ -55,7 +56,8 @@ Have 3 puzzles, upon completion of first two puzzles, collect items to help in t
                             4th = collect items/regain health and/or new spells
 still 2 playable character options
 ## Timeline
-- 12/1 -> have plans finished, have Main Menu and GameOver scene created by class start -> work on 
+- 12/1 -> have plans finished, have Main Menu and GameOver scene created by class start -> work on buttons later 
+            create sprites
 - 12/5 -> first Puzzle completed w/ 1st character basics done, scene for collecting items competed
         animations for scene changes done, boss battle in the works
 - 12/8 -> 2nd and most of 3rd puzzle done w/ 1st player completed and 2nd player just about done, 
