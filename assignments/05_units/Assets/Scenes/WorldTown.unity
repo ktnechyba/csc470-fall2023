@@ -18072,9 +18072,11 @@ MonoBehaviour:
   potionSelected: 0
   pointCount: 0
   coinCount: 0
+  cam: {fileID: 0}
   starCount: 0
-  happiness: 100
+  happiness: 300
   happyText: {fileID: 600697084}
+  subtractHappiness: 10
 --- !u!4 &1658695069
 Transform:
   m_ObjectHideFlags: 0

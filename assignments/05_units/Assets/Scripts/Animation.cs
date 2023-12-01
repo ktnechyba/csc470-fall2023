@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class Animation : MonoBehaviour
 {
+    float lastFed = 150f;
+    Animation _animator;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -14,5 +17,18 @@ public class Animation : MonoBehaviour
     void Update()
     {
         
+    }
+
+    void Fed()
+    {
+
+    }
+    void Overfed()
+    {
+        
+    }
+    void Hungry()
+    {
+
     }
 }

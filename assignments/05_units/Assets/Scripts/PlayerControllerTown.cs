@@ -25,6 +25,7 @@ public class PlayerControllerTown : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //agent.SetDestination(GameManager.target);
         //Vector3 amountToMove = Vector3.zero;
         //if (hasTarget)
         //{
@@ -42,19 +43,19 @@ public class PlayerControllerTown : MonoBehaviour
         //    }
         //}
 
-        if (Input.GetMouseButtonDown(0))
-        {
-            Ray ray = cam.ScreenPointToRay(Input.mousePosition);
-            RaycastHit hit;
-            if (Physics.Raycast(ray, out hit))
-            {
-                agent.SetDestination(hit.point);
-                GameObject.FindGameObjectWithTag("stars").GetComponent<StarTriggerManager>().IsNotTriggered();
-                GameObject.FindGameObjectWithTag("potions").GetComponent<ShopTriggerManager>().IsNotTriggered();
-                StartCoroutine(BoxCollide());
+        //if (Input.GetMouseButtonDown(0))
+        //{
+        //    Ray ray = cam.ScreenPointToRay(Input.mousePosition);
+        //    RaycastHit hit;
+        //    if (Physics.Raycast(ray, out hit))
+        //    {
+        //        target = hit.point; agent.SetDestination(hit.point);
+        //        GameObject.FindGameObjectWithTag("stars").GetComponent<StarTriggerManager>().IsNotTriggered();
+        //        GameObject.FindGameObjectWithTag("potions").GetComponent<ShopTriggerManager>().IsNotTriggered();
+        //        StartCoroutine(BoxCollide());
 
-            }
-        }
+        //    }
+        //}
         Vector3 newCamPos = transform.position + -transform.forward * 3f + Vector3.up * 3f;
         if (oldCamPos == null)
         {
@@ -66,12 +67,6 @@ public class PlayerControllerTown : MonoBehaviour
 
     }
 
-    IEnumerator BoxCollide()
-    {
-        yield return new WaitForSeconds(3);
-        GameObject.FindGameObjectWithTag("potions").GetComponent<BoxCollider>().enabled = true;
-        GameObject.FindGameObjectWithTag("stars").GetComponent<BoxCollider>().enabled = true;
-    }
     //public void SetTarget(Vector3 targetPoint)
     //{
     //        target = targetPoint;
