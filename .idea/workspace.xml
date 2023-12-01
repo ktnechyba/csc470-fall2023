@@ -7,6 +7,7 @@
     <list default="true" id="f3f60078-9c99-4229-93d7-40db9758a486" name="Changes" comment="">
       <change afterPath="$PROJECT_DIR$/assignments/final/images/IMG_9160.jpeg" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/assignments/final/images/IMG_9161.jpeg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assignments/final/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/assignments/final/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -41,13 +42,14 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/assignments/final/images" />
       <recent name="$PROJECT_DIR$/placeholder" />
       <recent name="$PROJECT_DIR$/Assignments/final" />
       <recent name="$PROJECT_DIR$/Assignments/Final" />
       <recent name="$PROJECT_DIR$/Assignments/05_units" />
-      <recent name="$PROJECT_DIR$/Assignments/04_flight" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/assignments/final/images" />
       <recent name="$PROJECT_DIR$/assignments" />
       <recent name="$PROJECT_DIR$/placeholder" />
       <recent name="$PROJECT_DIR$/Assignments/01_machine" />
