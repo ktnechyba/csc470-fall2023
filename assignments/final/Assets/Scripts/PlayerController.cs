@@ -6,6 +6,8 @@ public class PlayerController : MonoBehaviour
 {
     public CharacterController cc;
     public Animator animator;
+    public Camera cam;
+    Vector3 oldCamPos;
 
     bool walking = false;
     bool toRun = false;
@@ -94,6 +96,14 @@ public class PlayerController : MonoBehaviour
         cc.Move(amountToMove * Time.deltaTime);
         Debug.Log(amountToMove);
         CheckMovement();
+        Vector3 newCamPos = transform.position + -transform.forward * 5f + Vector3.up * 8f;
+        if (oldCamPos == null)
+        {
+            oldCamPos = newCamPos;
+        }
+        cam.transform.position = (newCamPos + oldCamPos) / 2f;
+        cam.transform.LookAt(transform);
+        oldCamPos = newCamPos;
     }
 
     public void CheckMovement()
