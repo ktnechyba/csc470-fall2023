@@ -5,7 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f3f60078-9c99-4229-93d7-40db9758a486" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/assignments/final/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/assignments/final/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assignments/final/Assets/ADG_Textures/Plank Textures/Planks4/Planks4b.mat" beforeDir="false" afterPath="$PROJECT_DIR$/assignments/final/Assets/ADG_Textures/Plank Textures/Planks4/Planks4b.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assignments/final/Assets/ADG_Textures/Plank Textures/Planks4/Planks4c.mat" beforeDir="false" afterPath="$PROJECT_DIR$/assignments/final/Assets/ADG_Textures/Plank Textures/Planks4/Planks4c.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assignments/final/Assets/Scenes/Game Over.unity" beforeDir="false" afterPath="$PROJECT_DIR$/assignments/final/Assets/Scenes/Game Over.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assignments/final/Assets/Scenes/MainMenu.unity" beforeDir="false" afterPath="$PROJECT_DIR$/assignments/final/Assets/Scenes/MainMenu.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assignments/final/Assets/Scripts/GOSceneManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/assignments/final/Assets/Scripts/GOSceneManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assignments/final/Assets/Scripts/SceneManagerMenu.cs" beforeDir="false" afterPath="$PROJECT_DIR$/assignments/final/Assets/Scripts/SceneManagerMenu.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assignments/final/Packages/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/assignments/final/Packages/manifest.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assignments/final/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/assignments/final/Packages/packages-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assignments/final/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/assignments/final/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assignments/final/ProjectSettings/GraphicsSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/assignments/final/ProjectSettings/GraphicsSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

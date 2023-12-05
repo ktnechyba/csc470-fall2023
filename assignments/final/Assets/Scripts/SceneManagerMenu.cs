@@ -5,13 +5,16 @@ using UnityEngine.SceneManagement;
 
 public class SceneManagerMenu : MonoBehaviour
 {
+    //public Animator animator;
     public void ButtonClicked()
+
     {
         //has button sound
     }
     public void StartButton()
     {
-        SceneManager.LoadScene("SampleScene");
+        SceneManager.LoadScene("Puzzle1");
+        //animator.SetBool("P1", true);
     }
 
     //void SettingsButtonMenu()
