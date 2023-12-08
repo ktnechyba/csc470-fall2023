@@ -4,15 +4,19 @@ using UnityEngine;
 
 public class wateringCanCollection : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public bool can = false;
 
-    // Update is called once per frame
-    void Update()
+
+    public void Awake()
     {
-        
+
+    }
+    public void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("Player"))
+        {
+            can = true;
+            gameObject.SetActive(false);
+        }
     }
 }

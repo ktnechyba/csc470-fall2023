@@ -8,6 +8,9 @@ public class PlayerController : MonoBehaviour
     public Animator animator;
     public Camera cam;
     Vector3 oldCamPos;
+    public GameObject keyPlat;
+    public GameObject fakePlat;
+    public GameObject exitPlat;
 
     bool walking = false;
     bool toRun = false;
@@ -44,6 +47,7 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     public void Update()
     {
+
         //isGrounded = Physics.CheckSphere(groundCheck.position, groundDis, ground);
 
         //if (isGrounded&& velocity.y < 0)
@@ -104,6 +108,18 @@ public class PlayerController : MonoBehaviour
         cam.transform.position = (newCamPos + oldCamPos) / 2f;
         cam.transform.LookAt(transform);
         oldCamPos = newCamPos;
+        if(transform.position.y < 4f)
+        {
+            keyPlat.SetActive(false);
+            fakePlat.SetActive(false);
+            exitPlat.SetActive(false);
+        }
+        else
+        {
+            keyPlat.SetActive(true);
+            fakePlat.SetActive(true);
+            exitPlat.SetActive(true);
+        }
     }
 
     public void CheckMovement()
@@ -134,4 +150,5 @@ public class PlayerController : MonoBehaviour
 
         }
     }
+
 }
