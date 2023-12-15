@@ -41,4 +41,6 @@ public class GOSceneManager : MonoBehaviour
         yield return new WaitForSeconds(3.5f);
         SceneManager.LoadScene("MainMenu");
     }
+
+
 }

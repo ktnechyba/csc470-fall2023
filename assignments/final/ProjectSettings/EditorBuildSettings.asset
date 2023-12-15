@@ -23,4 +23,13 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Puzzle2.unity
     guid: c4293c2bde7fb44458415023b4176f05
+  - enabled: 1
+    path: Assets/Scenes/Puzzle3.unity
+    guid: a8b76650b62494c4a8e9e6e08dec4a69
+  - enabled: 1
+    path: Assets/Scenes/Battle.unity
+    guid: 983ffe1842a4f4d1c862b337c4056a28
+  - enabled: 1
+    path: Assets/Scenes/CharacterSelect.unity
+    guid: b212a280f95364b2ba96db86beef8094
   m_configObjects: {}

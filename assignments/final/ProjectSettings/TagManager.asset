@@ -6,6 +6,12 @@ TagManager:
   tags:
   - portal
   - watered
+  - button1
+  - button2
+  - cube
+  - pipe
+  - door
+  - npc
   layers:
   - Default
   - TransparentFX

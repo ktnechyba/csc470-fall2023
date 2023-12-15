@@ -4,9 +4,7 @@ using UnityEngine;
 
 public class ClickOn : MonoBehaviour
 {
-    public int x;
-    public int y;
-    public int z;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -18,8 +16,19 @@ public class ClickOn : MonoBehaviour
     {
         
     }
+
+    Vector3 mousePos;
+    private Vector3 GetMousePos()
+    {
+        return Camera.main.WorldToScreenPoint(transform.position);
+    }
     private void OnMouseDown()
     {
-        
+        mousePos = Input.mousePosition - GetMousePos();
+    }
+
+    private void OnMouseDrag()
+    {
+        transform.position = Camera.main.ScreenToWorldPoint(Input.mousePosition - mousePos);
     }
 }

@@ -13,7 +13,7 @@ public class SceneManagerMenu : MonoBehaviour
     }
     public void StartButton()
     {
-        SceneManager.LoadScene("Puzzle1");
+        SceneManager.LoadScene("CharacterSelect");
         //animator.SetBool("P1", true);
     }
 

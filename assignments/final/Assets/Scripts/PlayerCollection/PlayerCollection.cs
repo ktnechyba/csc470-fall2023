@@ -1,8 +1,11 @@
 using System.Collections;
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using TMPro;
+
+
 
 
 public class PlayerCollection : MonoBehaviour
@@ -15,12 +18,22 @@ public class PlayerCollection : MonoBehaviour
     bool fade = false;
     private float fixedDeltaTime;
     public TMP_Text completed;
-
+    public TMP_Text lifeCount;
+    public int life = 1;
+    public int lives;
     [SerializeField] float speed = 1f;
+    public int count = 0;
+
+
     void Awake()
     {
         this.fixedDeltaTime = Time.fixedDeltaTime;
 
+
+    }
+    private void Start()
+    {
+        count = PlayerPrefs.GetInt("count");
     }
     // Update is called once per frame
     void Update()
@@ -29,6 +42,8 @@ public class PlayerCollection : MonoBehaviour
         if (Vector3.Distance(transform.position, waypoint.transform.position) < .1f)
         {
             animator.SetBool("win", win = true);
+            life = 3;       
+            lifeCount.text = "x"+life.ToString();
             StartCoroutine(Freeze());
         }
     }
@@ -42,8 +57,26 @@ public class PlayerCollection : MonoBehaviour
         Time.timeScale = 0.0f;
         //yield return new WaitForSeconds(1);
         Time.timeScale = 1.0f;
-        SceneManager.LoadScene("Puzzle2");
+        count += 1;
+        PlayerPrefs.SetInt("count", count);
+        if (count==1)
+            SceneManager.LoadScene("Puzzle3");
+        if (count == 2)
+            SceneManager.LoadScene("Battle");
+        if (count ==3)
+        {
+            completed.text = "You Win!!!";
+            yield return new WaitForSeconds(.5f);
+            SceneManager.LoadScene("MainMenu");
 
+        }
+
+
+
+    }
+    public void MainMen()
+    {
+        SceneManager.LoadScene("MainMenu");
     }
     //IEnumerator FadeIn()
     //{

@@ -2,32 +2,23 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public class PlayerController : MonoBehaviour
 {
     public CharacterController cc;
     public Animator animator;
     public Camera cam;
     Vector3 oldCamPos;
+
     public GameObject keyPlat;
     public GameObject fakePlat;
     public GameObject exitPlat;
+
 
     bool walking = false;
     bool toRun = false;
     bool isIdle = false;
 
-    //public float gravity = -19.62f;
-    //public float speed = 12f;
-    //public float jumpHeight = 3f;
-    //public float rotateSpeed = 60f;
-
-    //public Transform groundCheck;
-    //public float groundDis = 0.4f;
-
-    //public LayerMask ground;
-
-    //Vector3 velocity;
-    //bool isGrounded;
 
     float forwardSpeed = 5f;
     float rotateSpeed = 85f;
@@ -36,6 +27,8 @@ public class PlayerController : MonoBehaviour
     float jumpForce = 12f;
     float gravityModifier = 4.5f;
     public Vector3 amountToMove;
+
+    public GameObject barrier;
 
 
     // Start is called before the first frame update
@@ -47,32 +40,7 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     public void Update()
     {
-
-        //isGrounded = Physics.CheckSphere(groundCheck.position, groundDis, ground);
-
-        //if (isGrounded&& velocity.y < 0)
-        //{
-        //    velocity.y = -2f;
-        //}
-
-        //float xAxis = Input.GetAxis("Horizontal");
-        //float zAxis = Input.GetAxis("Vertical");
-        //transform.Rotate(0, xAxis * rotateSpeed * Time.deltaTime, 0, Space.Self);
-
-
-        //Vector3 move = transform.right * xAxis+transform.forward * zAxis;
-
-        //cc.Move(move*speed*Time.deltaTime);
-        ////step offset to go up stairs
-
-        //if(Input.GetButtonDown("Jump") && isGrounded)
-        //{
-        //    velocity.y += Mathf.Sqrt(jumpHeight * -2f * gravity);
-        //}
-
-        //velocity.y += gravity * Time.deltaTime;
-        //cc.Move(velocity*Time.deltaTime);
-
+        Vector3 pos = transform.position;
         float hAxis = Input.GetAxis("Horizontal");
         float vAxis = Input.GetAxis("Vertical");
 
@@ -120,6 +88,12 @@ public class PlayerController : MonoBehaviour
             fakePlat.SetActive(true);
             exitPlat.SetActive(true);
         }
+
+        if(transform.position.y < 0)
+        {
+            transform.position = pos;
+        }
+        
     }
 
     public void CheckMovement()
@@ -148,6 +122,22 @@ public class PlayerController : MonoBehaviour
             animator.SetBool("walking", walking = false);
             animator.SetBool("toRun", toRun = false);
 
+        }
+    }
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("door"))
+        {
+            this.enabled = false;
+            GameObject.FindGameObjectWithTag("door").GetComponent<DoorTrigger>().enabled = true;
+
+        }
+        if (other.CompareTag("npc"))
+        {
+            if (other.CompareTag("Player"))
+            {
+                barrier.GetComponent<BoxCollider>().enabled = true;
+            }
         }
     }
 
