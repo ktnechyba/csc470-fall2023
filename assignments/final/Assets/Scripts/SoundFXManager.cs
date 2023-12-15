@@ -4,15 +4,16 @@ using UnityEngine;
 
 public class SoundFXManager : MonoBehaviour
 {
+    public SoundFXManager instance;
+    public AudioSource soundFXobject;
     // Start is called before the first frame update
-    void Start()
+    private void Awake()
     {
-        
+        if (instance == null)
+        {
+            instance = this;
+        }
     }
+    //public void PlaySoundFXClip(AudioClip audioClip)
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }
