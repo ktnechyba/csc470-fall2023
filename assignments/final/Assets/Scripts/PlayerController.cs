@@ -18,6 +18,7 @@ public class PlayerController : MonoBehaviour
     bool walking = false;
     bool toRun = false;
     bool isIdle = false;
+    bool attack = false;
 
 
     float forwardSpeed = 5f;
@@ -93,6 +94,8 @@ public class PlayerController : MonoBehaviour
         {
             transform.position = pos;
         }
+
+
         
     }
 
@@ -105,14 +108,15 @@ public class PlayerController : MonoBehaviour
             animator.SetBool("toRun", toRun = true);
             animator.SetBool("isIdle", isIdle = false);
 
-
         }
+
         else if (amountToMove.z != 0)
         {
             forwardSpeed = 4;
             animator.SetBool("isIdle", isIdle = false);
             animator.SetBool("walking", walking = true);
             animator.SetBool("toRun", toRun = false);
+
 
         }
         else
@@ -121,6 +125,17 @@ public class PlayerController : MonoBehaviour
             animator.SetBool("isIdle", isIdle = true);
             animator.SetBool("walking", walking = false);
             animator.SetBool("toRun", toRun = false);
+
+
+        }
+        if (Input.GetKeyDown(KeyCode.Delete))
+        {
+
+            animator.SetBool("attack", attack = true);
+        }
+        else
+        {
+            animator.SetBool("attack", attack = false);
 
         }
     }

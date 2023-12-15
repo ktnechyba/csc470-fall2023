@@ -18,5 +18,10 @@ public class wateringCanCollection : MonoBehaviour
             can = true;
             gameObject.SetActive(false);
         }
+        if (other.CompareTag("player"))
+        {
+            can = true;
+            gameObject.SetActive(false);
+        }
     }
 }

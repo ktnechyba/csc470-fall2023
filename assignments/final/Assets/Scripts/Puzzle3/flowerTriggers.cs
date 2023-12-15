@@ -33,7 +33,7 @@ public class flowerTriggers : MonoBehaviour
         }
         if(other.CompareTag("Player") && gameObject.CompareTag("portal"))
         {
-            SceneManager.LoadScene("Puzzle1Collection");
+            SceneManager.LoadScene("GameOver");
         }
         if (other.CompareTag("Player") && gameObject.CompareTag("button2"))
         {
@@ -42,7 +42,7 @@ public class flowerTriggers : MonoBehaviour
         }
         if (other.CompareTag("player") && gameObject.CompareTag("portal"))
         {
-            SceneManager.LoadScene("Puzzle1Collection");
+            SceneManager.LoadScene("GameOver");
         }
         if (other.CompareTag("player") && gameObject.CompareTag("button2"))
         {

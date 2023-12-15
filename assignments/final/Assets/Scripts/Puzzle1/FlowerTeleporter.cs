@@ -20,12 +20,24 @@ public class FlowerTeleporter : MonoBehaviour
         {
             SceneManager.LoadScene("Puzzle1Collection");
         }
+        //if (gameObject.CompareTag("portal"))
+        //{
+        //    watered = true;
+        //}
         if (other.CompareTag("Player") && gameObject.CompareTag("watered"))
         {
             watered = true;
+            GameObject.FindGameObjectWithTag("portal").GetComponent<FlowerTeleporter>().watered = true;
             rend.sharedMaterial = flowBlue;
             flowerTeleporter.enabled = false;
         }
-        
+        if (other.CompareTag("player") && gameObject.CompareTag("watered"))
+        {
+            watered = true;
+            GameObject.FindGameObjectWithTag("portal").GetComponent<FlowerTeleporter>().watered = true;
+            rend.sharedMaterial = flowBlue;
+            flowerTeleporter.enabled = false;
+        }
+
     }
 }

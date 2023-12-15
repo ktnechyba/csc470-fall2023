@@ -9275,7 +9275,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1426583158621976245, guid: 6a1d782fa8be94a9baf88868fb770185, type: 3}
       propertyPath: m_TagString
-      value: Player
+      value: player
       objectReference: {fileID: 0}
     - target: {fileID: 3102245519614061593, guid: 6a1d782fa8be94a9baf88868fb770185, type: 3}
       propertyPath: m_LocalPosition.x
@@ -14396,7 +14396,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 347.00003, y: 330.99994}
+  m_AnchoredPosition: {x: 515, y: 330.99994}
   m_SizeDelta: {x: -1109.145, y: -739.242}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &961817586
@@ -20599,7 +20599,7 @@ MonoBehaviour:
   m_MinValue: 0
   m_MaxValue: 180
   m_WholeNumbers: 0
-  m_Value: 0
+  m_Value: 90
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
@@ -21543,7 +21543,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1347826686
 RectTransform:
   m_ObjectHideFlags: 0
@@ -22752,7 +22752,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1397661799
 RectTransform:
   m_ObjectHideFlags: 0

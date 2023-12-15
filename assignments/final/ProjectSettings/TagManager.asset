@@ -12,6 +12,8 @@ TagManager:
   - pipe
   - door
   - npc
+  - player
+  - weapon
   layers:
   - Default
   - TransparentFX

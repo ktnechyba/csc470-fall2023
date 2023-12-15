@@ -42,8 +42,7 @@ public class PlayerCollection : MonoBehaviour
         if (Vector3.Distance(transform.position, waypoint.transform.position) < .1f)
         {
             animator.SetBool("win", win = true);
-            life = 3;       
-            lifeCount.text = "x"+life.ToString();
+
             StartCoroutine(Freeze());
         }
     }
@@ -57,19 +56,9 @@ public class PlayerCollection : MonoBehaviour
         Time.timeScale = 0.0f;
         //yield return new WaitForSeconds(1);
         Time.timeScale = 1.0f;
-        count += 1;
-        PlayerPrefs.SetInt("count", count);
-        if (count==1)
-            SceneManager.LoadScene("Puzzle3");
-        if (count == 2)
-            SceneManager.LoadScene("Battle");
-        if (count ==3)
-        {
-            completed.text = "You Win!!!";
-            yield return new WaitForSeconds(.5f);
-            SceneManager.LoadScene("MainMenu");
 
-        }
+        SceneManager.LoadScene("Puzzle3");
+
 
 
 
